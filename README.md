@@ -19,8 +19,10 @@ extent: 3
 2.Калькулятор
 
 enter expression:
+
 > 2 + 3 * 4
 result: 14
+
 > (10 - 2) / 4
 result: 2
 
