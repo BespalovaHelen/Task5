@@ -72,7 +72,11 @@
 /* Программа вычисления протяжения скобочной системы */
 #include <stdio.h>
 
-#line 76 "1.c"
+
+int yylex(void);           
+void yyerror(const char *);
+
+#line 80 "1.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -529,7 +533,7 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,     7,     7,    10,    11
+       0,    11,    11,    14,    15
 };
 #endif
 
@@ -1086,25 +1090,25 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* P: S  */
-#line 7 "1.y"
+#line 11 "1.y"
                       { printf("extent: %d\n", yyvsp[0]); }
-#line 1092 "1.c"
+#line 1096 "1.c"
     break;
 
   case 3: /* S: '(' S ')' S  */
-#line 10 "1.y"
+#line 14 "1.y"
                       { yyval = yyvsp[0] + 1; }
-#line 1098 "1.c"
+#line 1102 "1.c"
     break;
 
   case 4: /* S: %empty  */
-#line 11 "1.y"
+#line 15 "1.y"
                       { yyval = 0; }
-#line 1104 "1.c"
+#line 1108 "1.c"
     break;
 
 
-#line 1108 "1.c"
+#line 1112 "1.c"
 
       default: break;
     }
@@ -1297,7 +1301,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 13 "1.y"
+#line 17 "1.y"
 
 
 int main(void) {
